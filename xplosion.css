@@ -1,0 +1,544 @@
+/* Variables */
+/* Reset for Browser Safety */
+/* line 21, SASS/xplosion.scss */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, a, em, img,
+b, u, i, center, ol, ul, li, form,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, footer, header, hgroup, form, input,
+menu, nav, output, section, summary {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 29, SASS/xplosion.scss */
+a {
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 33, SASS/xplosion.scss */
+article, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 36, SASS/xplosion.scss */
+body {
+  line-height: 1;
+}
+
+/* line 39, SASS/xplosion.scss */
+ol, ul {
+  list-style: none;
+  padding: 0px;
+}
+
+/* line 43, SASS/xplosion.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 47, SASS/xplosion.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 51, SASS/xplosion.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* This is where the real work begins. */
+/* General Styling */
+/* line 60, SASS/xplosion.scss */
+.button {
+  background-color: #e61052;
+  border-radius: 10px;
+  border: 0px;
+  color: #FFF;
+}
+
+/* line 66, SASS/xplosion.scss */
+body {
+  background-color: #eae2d7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 72, SASS/xplosion.scss */
+body h1 {
+  color: #e61052;
+}
+/* line 76, SASS/xplosion.scss */
+body a {
+  color: inherit;
+}
+
+/* line 80, SASS/xplosion.scss */
+.gradient {
+  height: 150px;
+  width: 100%;
+  background: -webkit-linear-gradient(#cac2b7, #eae2d7);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#cac2b7, #eae2d7);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#cac2b7, #eae2d7);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#cac2b7, #eae2d7);
+  /* Standard syntax */
+  -pie-background: linear-gradient(to bottom, #cac2b7, #eae2d7);
+  /* PIE for IE 6-9 */
+  behavior: url("PIE/PIE.htc");
+}
+
+/* Header Styling */
+/* line 92, SASS/xplosion.scss */
+.header {
+  width: 960px;
+  display: block;
+  height: 140px;
+  margin: auto;
+  position: relative;
+}
+/* line 98, SASS/xplosion.scss */
+.header img.logo {
+  width: 185px;
+  height: 58px;
+  background: url("sprite.png") 0px 0px;
+  display: inline;
+  float: left;
+  margin: 40px 45px 40px 15px;
+}
+/* line 106, SASS/xplosion.scss */
+.header img.banner {
+  width: 245px;
+  height: 65px;
+  background: url("sprite.png") -188px 0;
+  display: inline;
+  margin: 38px 45px 37px 45px;
+}
+/* line 113, SASS/xplosion.scss */
+.header .search-form {
+  display: inline;
+  height: 30px;
+  margin: 55px 5px 37px 45px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+/* line 120, SASS/xplosion.scss */
+.header .search-form .search {
+  width: 150px;
+  padding: 10px;
+  outline: none;
+  border: 0px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 129, SASS/xplosion.scss */
+.header .search-form ::-webkit-input-placeholder {
+  /* For Webkit browsers */
+  color: #e61052;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+/* line 134, SASS/xplosion.scss */
+.header .search-form :-moz-placeholder {
+  /* For Mozilla Firefox 4 to 18 */
+  color: #e61052;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+/* line 139, SASS/xplosion.scss */
+.header .search-form ::-moz-placeholder {
+  /* For Mozilla Firefox 19+ */
+  color: #e61052;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+/* line 144, SASS/xplosion.scss */
+.header .search-form :-ms-input-placeholder {
+  /* For Internet Explorer 10+ */
+  color: #e61052;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+/* line 149, SASS/xplosion.scss */
+.header .search-form .button {
+  height: 30px;
+  font-size: 10px;
+  padding: 0px 3px;
+  border-radius: 10px;
+  behavior: url("PIE/PIE.htc");
+}
+
+/* Menu Styling */
+/* line 160, SASS/xplosion.scss */
+.top-nav {
+  width: 960px;
+  height: 55px;
+  margin: auto;
+}
+/* line 164, SASS/xplosion.scss */
+.top-nav ul {
+  width: 960px;
+  margin: auto;
+}
+/* line 167, SASS/xplosion.scss */
+.top-nav ul li {
+  width: 160px;
+  height: 11px;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("sprite.png") -4px -207px;
+  text-align: center;
+  display: block;
+  float: left;
+  padding: 22px 0px;
+}
+/* line 177, SASS/xplosion.scss */
+.top-nav ul li + li {
+  background: url("sprite.png") -167px -207px;
+}
+/* line 179, SASS/xplosion.scss */
+.top-nav ul li + li + li + li + li + li {
+  background: url("sprite.png") -330px -207px;
+}
+
+/* Home Page Styling */
+/* line 188, SASS/xplosion.scss */
+.main-content {
+  color: #6e5e46;
+  margin: auto;
+  width: 960px;
+  clear: both;
+  display: block;
+  min-height: 1125px;
+}
+
+/* line 197, SASS/xplosion.scss */
+#left-col {
+  width: 630px;
+  margin: 40px 0px;
+  display: inline;
+  float: left;
+}
+/* line 202, SASS/xplosion.scss */
+#left-col img#xplosion2 {
+  width: 300px;
+  height: 98px;
+  background: url("sprite.png") -2px -267px;
+  margin-bottom: 15px;
+}
+/* line 208, SASS/xplosion.scss */
+#left-col #intro {
+  display: block;
+  width: 640px;
+  height: 430px;
+  background: url("sprite.png") -2px -367px;
+}
+/* line 213, SASS/xplosion.scss */
+#left-col #intro #intro-text {
+  width: 55%;
+  display: block;
+  float: left;
+  margin: 10px 0px;
+  line-height: 1.5;
+}
+/* line 219, SASS/xplosion.scss */
+#left-col #intro #intro-text p {
+  color: #e61052;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+/* line 223, SASS/xplosion.scss */
+#left-col #intro #intro-text p + p {
+  color: #6e5e46;
+  font-weight: normal;
+}
+/* line 231, SASS/xplosion.scss */
+#left-col #gallery {
+  background-color: #c9bba9;
+  border-radius: 10px;
+  width: 600px;
+  height: 175px;
+  position: relative;
+  margin: auto;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 239, SASS/xplosion.scss */
+#left-col #gallery .button {
+  width: 40px;
+  height: 55px;
+  border-radius: 10px;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 245, SASS/xplosion.scss */
+#left-col #gallery .button#prv {
+  position: absolute;
+  top: 60px;
+  left: -20px;
+}
+/* line 250, SASS/xplosion.scss */
+#left-col #gallery .button#nxt {
+  position: absolute;
+  top: 60px;
+  right: -20px;
+}
+/* line 255, SASS/xplosion.scss */
+#left-col #gallery img {
+  width: 162px;
+  height: 133px;
+  border-radius: 10px;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 261, SASS/xplosion.scss */
+#left-col #gallery img#gal-img-1 {
+  background: url("sprite.png") -3px -67px;
+  position: absolute;
+  top: 21px;
+  left: 36px;
+}
+/* line 267, SASS/xplosion.scss */
+#left-col #gallery img#gal-img-2 {
+  background: url("sprite.png") -169px -67px;
+  position: absolute;
+  top: 21px;
+  left: 216px;
+}
+/* line 273, SASS/xplosion.scss */
+#left-col #gallery img#gal-img-3 {
+  background: url("sprite.png") -335px -67px;
+  position: absolute;
+  top: 21px;
+  right: 36px;
+}
+/* line 281, SASS/xplosion.scss */
+#left-col #product-expansion {
+  background-color: #FFF;
+  border-radius: 10px;
+  width: 640px;
+  margin: 20px 0px;
+  position: relative;
+  z-index: 10;
+  color: #d9cbb6;
+  line-height: 1.5;
+  font-size: 13px;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 292, SASS/xplosion.scss */
+#left-col #product-expansion h1 {
+  background-color: #e61052;
+  position: relative;
+  z-index: 52;
+  color: #FFF;
+  height: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px 10px;
+  float: left;
+  width: 300px;
+  margin: 0 0 20px 0;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 306, SASS/xplosion.scss */
+#left-col #product-expansion h2 {
+  color: #77644b;
+  font-weight: bold;
+  margin-top: 30px;
+}
+/* line 311, SASS/xplosion.scss */
+#left-col #product-expansion .article {
+  padding: 10px;
+  min-height: 200px;
+}
+/* line 314, SASS/xplosion.scss */
+#left-col #product-expansion .article a {
+  color: #e61052;
+  font-size: 12px;
+}
+/* line 318, SASS/xplosion.scss */
+#left-col #product-expansion .article img.more {
+  width: 21px;
+  height: 26px;
+  background: url("sprite.png") -432px -26px;
+  float: none;
+  margin: 0px;
+}
+/* line 326, SASS/xplosion.scss */
+#left-col #product-expansion img {
+  display: inline;
+  float: left;
+  margin: 5px 10px 0 0;
+}
+/* line 331, SASS/xplosion.scss */
+#left-col #product-expansion p {
+  width: 175px;
+  float: left;
+}
+/* line 337, SASS/xplosion.scss */
+#left-col #products {
+  position: absolute;
+  z-index: 50;
+  top: 0px;
+  left: 0px;
+  width: 320px;
+  background-color: #FFF;
+  border-radius: 10px 0px 0px 10px;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 346, SASS/xplosion.scss */
+#left-col #products h1 {
+  border-radius: 10px 0 0 0;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 352, SASS/xplosion.scss */
+#left-col #expansion {
+  position: absolute;
+  z-index: 50;
+  top: 0px;
+  left: 320px;
+  width: 320px;
+  background-color: #FFF;
+  border-radius: 0px 10px 10px 0px;
+  border-left: 1px dotted #d9cbb6;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 362, SASS/xplosion.scss */
+#left-col #expansion h1 {
+  border-radius: 0px 10px 0px 0px;
+  behavior: url("PIE/PIE.htc");
+  border-left: 1px dotted #d9cbb6;
+  margin-left: -1px;
+}
+/* line 370, SASS/xplosion.scss */
+#left-col img.cb-gal {
+  width: 100px;
+  height: 100px;
+}
+
+/* line 376, SASS/xplosion.scss */
+#right-col {
+  width: 320px;
+  margin-left: 20px;
+  display: inline;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 381, SASS/xplosion.scss */
+#right-col .basic {
+  width: 300px;
+  background-color: #FFF;
+  border-radius: 10px;
+  float: right;
+  margin: 20px 0 20px 10px;
+  line-height: 1.5;
+  padding-bottom: 5px;
+  behavior: url("PIE/PIE.htc");
+}
+/* line 391, SASS/xplosion.scss */
+#right-col h1 {
+  height: 15px;
+  padding: 20px 15px;
+  border-bottom: 1px dotted #d9cbb6;
+  font-weight: bold;
+}
+/* line 399, SASS/xplosion.scss */
+#right-col #follow #follow-links {
+  margin: 10px;
+}
+/* line 402, SASS/xplosion.scss */
+#right-col #follow a {
+  margin-left: 10px;
+  font-size: 12px;
+  padding: 2px 5px 5px 25px;
+  height: 25px;
+}
+/* line 408, SASS/xplosion.scss */
+#right-col #follow #facebook {
+  height: 22px;
+  width: 22px;
+  background: url("sprite.png") -508px -67px;
+}
+/* line 413, SASS/xplosion.scss */
+#right-col #follow #twitter {
+  height: 22px;
+  width: 22px;
+  background: url("sprite.png") -508px -91px;
+}
+/* line 418, SASS/xplosion.scss */
+#right-col #follow #google {
+  height: 22px;
+  width: 22px;
+  background: url("sprite.png") -508px -116px;
+}
+/* line 426, SASS/xplosion.scss */
+#right-col #random li {
+  padding: 5px 10px;
+}
+/* line 429, SASS/xplosion.scss */
+#right-col #random a {
+  background: url("sprite.png") -432px 0px no-repeat;
+  width: 20px;
+  height: 18px;
+  padding-left: 20px;
+}
+/* line 438, SASS/xplosion.scss */
+#right-col #find-us address {
+  padding: 10px 15px;
+  font-style: normal;
+}
+/* line 442, SASS/xplosion.scss */
+#right-col #find-us h2 {
+  font-weight: bold;
+  margin: 0px;
+}
+
+/* Footer Styling */
+/* line 451, SASS/xplosion.scss */
+footer, .footer {
+  font-size: 10px;
+  background-color: #c9bba9;
+  color: #77644b;
+  display: block;
+  clear: both;
+  margin: 0px;
+}
+
+/* line 459, SASS/xplosion.scss */
+.footer {
+  width: 960px;
+  padding: 30px;
+  font-size: 12px;
+  margin: 0px auto;
+}
+/* line 464, SASS/xplosion.scss */
+.footer p {
+  width: 540px;
+  display: inline;
+  float: left;
+}
+/* line 469, SASS/xplosion.scss */
+.footer .bottom-nav {
+  width: 410px;
+  display: inline;
+  float: right;
+}
+/* line 474, SASS/xplosion.scss */
+.footer a {
+  display: inline;
+  border-left: 1px dotted #77644b;
+  padding: 5px 20px;
+}
+/* line 478, SASS/xplosion.scss */
+.footer a + a + a + a {
+  border-right: 1px dotted #77644b;
+}

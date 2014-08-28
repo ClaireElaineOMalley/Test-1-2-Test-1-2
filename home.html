@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>X-PLOSION Soda for Superheroes</title>
+
+  <link rel="stylesheet" type="text/css" href="xplosion.css">
+	<link rel="stylesheet" type="text/css" href="colorbox/colorbox.css">
+
+  <meta charset="UTF-8">
+  <meta name="description" content="X-Plosion - Soda for Superheroes">
+  <meta name="keywords" content="X-Plosion,soda,healthy,alternative">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="colorbox/jquery.colorbox.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".cb-gal").colorbox({rel:'cb-gal', open:true, loop:false, width:'300px', height:'300px'});
+			});
+			
+			$(document).bind('cbox_complete', function(){
+				setTimeout($.colorbox.next, 2000);
+			});
+
+			$(document).bind('cbox_load', function(){
+				setTimeout($.colorbox.close, 8500); //2 seconds for each image, and a half second for first load time
+			});
+			
+			$(document).bind('cbox_closed', function(){
+				/* Since this starts on first load, we want the user to return to the top
+					of the page when the colorbox closes. However, IE8 and below don't like
+					document.reload, and window.location.reload just made the colorbox go
+					over and over and over and you could only get out of the loop if you
+					closed the tab. SO... */
+				if (document.all && document.querySelector && !document.addEventListener) { 
+					// IE8 -- do nothing
+				} else if ($document.all && !document.querySelector) {
+					// IE7 or lower -- do nothing
+				} else {
+					/* this browser is supported just fine -- please continue to the top of
+						the page and enjoy your visit */
+					$(document).reload();
+					$.colorbox.remove();
+				}
+			});
+		</script>
+
+</head>
+
+<body>
+<div class="gradient">
+<header>
+<a href="top"><div class="header">
+	<img class="logo" src="trans.png" alt="X-Plosion Soda that pops. Flavors that explode">
+	<img class="banner" src="trans.png" alt="X-Plosion Soda for Superheroes">
+  <form class="search-form">
+	  <input class="search" type="text" alt="Search"  placeholder="Search X-Plosion..." required style="width:213px;padding:10px;outline:none;border:none;border-radius:10px;font-family:Arial, sans-serif;font-size:10px;" />
+	  <input class="button" type="button" value="SEARCH" />
+  </form>
+</div> <!-- end header --></a>
+</header>
+</div> <!-- end gradient -->
+
+<nav>
+<div class="top-nav">
+	<ul>
+		<li>
+			<a href="home.html" alt="Home">HOME</a>
+		</li>
+		<li>
+			<a href="blog.html" alt="Blog">BLOG</a>
+		</li>
+		<li>
+			<a href="products.html" alt="Our Products">OUR PRODUCTS</a>
+		</li>
+		<li>
+			<a href="about.html" alt="About Us">ABOUT US</a>
+		</li>
+		<li>
+			<a href="buynow.html" alt="Where to Buy">WHERE TO BUY</a>
+		</li>
+		<li>
+			<a href="contact.html" alt="Contact Us">CONTACT US</a>
+		</li>
+	</ul>
+</div> <!-- end top-nav -->
+</nav>
+
+<main>
+<div class="main-content">
+	<div id="left-col">
+		<div id="intro">
+			<div id="intro-text">
+				<img id="xplosion2" src="trans.png" alt="X-Plosion Soda for Superheroes" >
+				<p>Try a healthy alternative to the current artificial drinks - your
+				mind, body and tongue will thank you!</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry. Lorem Ipsum has been the industry's standard dummy text ever
+				since the 1500s, when an unknown printer took a galley of type and
+				scrambled it to make a type specimen book. There are many variations
+				of passages of Lorem Ipsum available, but the majority have suffered.</p>
+			</div> <!-- end intro-text -->
+		</div> <!-- end intro -->
+		
+		<div id="gallery">
+			<button class="button" id="prv" type="button" alt="previous"><</button>
+			<img id="gal-img-1" alt="Partial image of bottle" src="trans.png">
+			<img id="gal-img-2" alt="Image of bottle label" src="trans.png">
+			<img id="gal-img-3" alt="Partial image of bottle" src="trans.png">
+			<button class="button" id="nxt" type="button" alt="next">></button>
+		</div> <!-- end gallery -->
+		
+		<div id="product-expansion">
+			<div id="products">
+				<h1>X-PLOSION PRODUCTS</h1>
+				<div class="article">
+					<h2>We say NO to artificial flavors</h2>
+					<a href="images/blue.png" class="cb-gal"><img src="images/blue.png" alt="X-Plosion product image"></a>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text
+					ever since the 1500s,
+						<br>
+						<a href="products/natural.html" alt="Read more about no artifical flavors">
+							More
+							<img class="more" src="trans.png" alt="More">
+						</a>
+					</p>
+				</div> <!-- end article -->
+				<div class="article">
+					<h2>New flavour added</h2>
+					<a href="images/green.png" class="cb-gal"><img src="images/green.png" alt="X-Plosion product image"></a>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text
+					ever since the 1500s,
+						<br>
+						<a href="products/newflavors.html" alt="Read more about our new flavor">
+							More
+							<img class="more" src="trans.png" alt="More">
+						</a>
+					</p>
+				</div> <!-- end article -->
+			</div> <!-- end products -->
+			
+			<div id="expansion">
+				<h1>X-PLOSION EXPANSION</h1>
+				<div class="article">
+					<h2>X-Plosion is a hit in Japan</h2>
+					<a href="images/japan.png" class="cb-gal"><img src="images/japan.png" alt="X-Plosion product image"></a>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text
+					ever since the 1500s,
+						<br>
+						<a href="expansion/Japan.html" alt="Read more about our Japan expansion">
+							More
+							<img class="more" src="trans.png" alt="More">
+						</a>
+					</p>
+				</div> <!-- end article -->
+				<div class="article">
+					<h2>Danish elder hooked on X-Plosion</h2>
+					<a href="images/elder.png" class="cb-gal"><img src="images/elder.png" alt="Danish elder"></a>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text
+					ever since the 1500s,
+						<br>
+						<a href="expansion/Denmark.html" alt="Read more about our Denmark expansion">
+							More
+							<img class="more" src="trans.png" alt="More">
+						</a>
+					</p>
+				</div> <!-- end article -->
+			</div> <!-- end expansion -->
+		</div> <!-- end product-expansion" -->
+	</div> <!-- end left-col -->
+	
+	<div id="right-col">
+		<div id="follow" class="basic">
+			<h1>FOLLOW US</h1>
+			<div id="follow-links">
+				<a href="http://www.facebook.com/X-Plosion" alt="Facebook" id="facebook">Facebook</a>
+				<a href="http://www.twitter.com/X-Plosion" alt="Twitter" id="twitter">Twitter</a>
+				<a href="http://plus.google.com/X-Plosion/posts" alt="Google+" id="google">Google+</a>
+			</div> <!-- end follow-links -->
+		</div> <!-- end follow -->
+		
+		<div id="random" class="basic">
+			<h1>RANDOMLY SELECTED</h1>
+			<ul>
+				<li>
+					<a href="expansion/Japan.html" alt="Japan expansion">
+						X-Plosion is a hit in Japan
+					</a>
+				</li>
+				<li>
+					<a href="products/newflavors.html" alt="3 new flavors">
+						3 new flavors addedd
+					</a>
+				</li>
+				<li>
+					<a href="http://www.youtube.com/user/x-plosion" alt="Youtube channel">
+						Check our new promo at Youtube
+					</a>
+				</li>
+				<li>
+					<a href="products/natural.html" alt="No artificial flavours">
+						We say NO to artificial flavours
+					</a>
+				</li>
+				<li>
+					<a href="products/health.html" alt="X-Plosion is healthy">
+						X-Plosion and your health
+					</a>
+				</li>
+			</ul>
+		</div> <!-- end random -->
+		
+		<div id="find-us" class="basic">
+			<h1>WHERE YOU CAN FIND US?</h1>
+			<address>
+				<a href="http://maps.google.com/?q=9+Danbury+Road,+Wilton,+CT,+06897" src="Our address">
+				<h2>X-Plosion Ltd</h2>
+				9 Danbury Road
+				<br>
+				Wilton
+				<br>
+				CT 06897
+				</a>
+			</address>
+		</div> <!-- end find-us -->
+	</div> <!-- end right-col -->
+</div> <!-- end main-content -->
+</main>
+
+<footer>
+<div class="footer">
+	<p>(c) Copyright 2011 X-Plosion Ltd.</p>
+	<nav class="bottom-nav">
+		<a href="faq.html" alt="FAQ">FAQ</a>
+		<a href="terms.html" alt="Terms">Terms</a>
+		<a href="privacy.html" alt="Privacy Policy">Privacy Policy</a>
+		<a href="contact.html" alt="Contact Us">Contact Us</a>
+	</nav>
+</div> <!-- end footer -->
+</footer>
+</body>
+</html>
+ 

@@ -1,0 +1,482 @@
+/* Variables */
+$font-stack: Arial, Helvetica, sans-serif;
+$background-color: #EAE2D7;
+$primary-highlight: #E61052;
+$dark-background: #C9BBA9;
+$primary-text: #6E5E46;
+$light-text: #D9CBB6;
+$dark-text: #77644B;
+$gradient-high: #CAC2B7;
+$default-font-size: 10px;
+$radius: 10px;
+
+
+/* Reset for Browser Safety */
+html, body, div, span, 
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, a, em, img, 
+b, u, i, center, ol, ul, li, form, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, footer, header, hgroup, form, input,
+menu, nav, output, section, summary {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; 
+}
+a {
+	text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+	padding: 0px;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* This is where the real work begins. */
+/* General Styling */
+.button {
+	background-color: $primary-highlight;
+	border-radius: $radius;
+	border: 0px;
+	color: #FFF;
+}
+body {
+	background-color: $background-color;
+	font-family: $font-stack;
+	margin: 0px;
+	padding: 0px;
+
+	h1 {
+		color: $primary-highlight;
+	}
+	
+	a {
+		color: inherit;
+	}
+}
+.gradient {
+	height: 150px;
+	width: 100%;
+	background: -webkit-linear-gradient($gradient-high, $background-color); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($gradient-high, $background-color); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($gradient-high, $background-color); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($gradient-high, $background-color); /* Standard syntax */
+	-pie-background: linear-gradient(to bottom, $gradient-high, $background-color); /* PIE for IE 6-9 */
+	behavior: url('PIE/PIE.htc');
+}	
+
+/* Header Styling */
+.header {
+	width: 960px;
+	display: block;
+	height: 140px;
+	margin: auto;
+	position: relative;
+	img.logo {
+		width: 185px;
+		height: 58px;
+		background: url('sprite.png') 0px 0px;
+		display: inline;
+		float: left;
+		margin: 40px 45px 40px 15px;
+	}
+	img.banner {
+		width: 245px;
+		height: 65px;
+		background: url('sprite.png') -188px 0;
+		display: inline;
+		margin: 38px 45px 37px 45px;
+	}
+	.search-form {
+		display: inline;
+		height: 30px;
+		margin: 55px 5px 37px 45px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		.search {
+			width: 150px;
+			padding: 10px;
+			outline: none;
+			border: 0px;
+			border-radius: $radius;
+			font-family: Arial, sans-serif;
+			behavior: url('PIE/PIE.htc');
+		}
+			::-webkit-input-placeholder { /* For Webkit browsers */
+				color: $primary-highlight;
+				font-family: $font-stack;
+				font-size: 10px;
+			}
+			:-moz-placeholder { /* For Mozilla Firefox 4 to 18 */
+				color: $primary-highlight;
+				font-family: $font-stack;
+				font-size: 10px;
+			}
+			::-moz-placeholder { /* For Mozilla Firefox 19+ */
+				color: $primary-highlight;
+				font-family: $font-stack;
+				font-size: 10px;
+			}
+			:-ms-input-placeholder { /* For Internet Explorer 10+ */
+				color: $primary-highlight;
+				font-family: $font-stack;
+				font-size: 10px;
+			}
+		.button {
+			height: 30px;
+			font-size: 10px;
+			padding: 0px 3px;
+			border-radius: $radius;
+			behavior: url('PIE/PIE.htc');
+		}
+	}
+}
+
+/* Menu Styling */
+.top-nav {
+	width: 960px;
+	height: 55px;
+	margin: auto;
+	ul {
+		width: 960px;
+		margin: auto;
+		li {
+			width: 160px;
+			height: 11px;
+			color: #FFF;
+			font-family: $font-stack;
+			background: url('sprite.png') -4px -207px;
+			text-align: center;
+			display: block;
+			float: left;
+			padding: 22px 0px;
+			+li {
+				background: url('sprite.png') -167px -207px;
+				+li+li+li+li {
+					background: url('sprite.png') -330px -207px;
+				}
+			}
+		}
+	}
+}
+		
+		/* Home Page Styling */
+.main-content {
+  color: $primary-text;
+	margin: auto;
+	width: 960px;
+	clear: both;
+	display: block;
+	min-height: 1125px;
+}
+
+#left-col {
+	width: 630px;
+	margin: 40px 0px;
+	display: inline;
+	float: left;
+	img#xplosion2  {
+		width: 300px;
+		height: 98px;
+		background: url('sprite.png') -2px -267px;
+		margin-bottom: 15px;
+	}
+	#intro {
+		display: block;
+		width: 640px;
+		height: 430px;
+		background: url('sprite.png') -2px -367px;
+		#intro-text {
+			width: 55%;
+			display: block;
+			float: left;
+			margin: 10px 0px;
+			line-height: 1.5;
+			p {
+				color: $primary-highlight;
+				font-weight: bold;
+				margin: 10px 0px;
+				+p {
+					color: $primary-text;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+
+	#gallery {
+		background-color: $dark-background;
+		border-radius: $radius;
+		width: 600px;
+		height: 175px;
+		position: relative;
+		margin: auto;
+		behavior: url('PIE/PIE.htc');
+		.button {
+			width: 40px;
+			height: 55px;
+			border-radius: $radius;
+			behavior: url('PIE/PIE.htc');
+		}
+		.button#prv {
+			position: absolute;
+			top: 60px;
+			left: -20px;
+		}
+		.button#nxt {
+			position: absolute;
+			top: 60px;
+			right: -20px;
+		}
+		img {
+			width: 162px;
+			height: 133px;
+			border-radius: $radius;
+			behavior: url('PIE/PIE.htc');
+		}
+		img#gal-img-1 {
+			background: url('sprite.png') -3px -67px;
+			position: absolute;
+			top: 21px;
+			left: 36px;
+		}
+		img#gal-img-2 {
+			background: url('sprite.png') -169px -67px;
+			position: absolute;
+			top: 21px;
+			left: 216px;
+		}
+		img#gal-img-3 {
+			background: url('sprite.png') -335px -67px;
+			position: absolute;
+			top: 21px;
+			right: 36px;
+		}
+	}
+
+	#product-expansion {
+		background-color: #FFF;
+		border-radius: $radius;
+		width: 640px;
+		margin: 20px 0px;
+		position: relative;
+		z-index: 10;
+		color: $light-text;
+		line-height: 1.5;
+		font-size: 13px;
+		behavior: url('PIE/PIE.htc');
+		h1 {
+			background-color: $primary-highlight;
+			position: relative;
+			z-index: 52;
+			color: #FFF;
+			height: 15px;
+			font-size: 15px;
+			font-weight: bold;
+			padding: 20px 10px;
+			float: left;
+			width: 300px;
+			margin: 0 0 20px 0;
+			behavior: url('PIE/PIE.htc');
+		}
+		h2 {
+			color: $dark-text;
+			font-weight: bold;
+			margin-top: 30px;
+		}
+		.article {
+			padding: 10px;
+			min-height: 200px;
+			a {
+				color: $primary-highlight;
+				font-size: 12px;
+			}
+			img.more {
+				width: 21px;
+				height: 26px;
+				background: url('sprite.png') -432px -26px;
+				float: none;
+				margin: 0px;
+			}
+		}
+		img {
+			display: inline;
+			float: left;
+			margin: 5px 10px 0 0;
+		}
+		p {
+			width: 175px;
+			float: left;
+		}
+	}
+
+	#products {
+		position: absolute;
+		z-index: 50;
+		top: 0px;
+		left: 0px;
+		width: 320px;
+		background-color: #FFF;
+		border-radius: 10px 0px 0px 10px;
+		behavior: url('PIE/PIE.htc');
+		h1 {
+			border-radius: 10px 0 0 0;
+			behavior: url('PIE/PIE.htc');
+		}
+	}
+	
+	#expansion {
+		position: absolute;
+		z-index: 50;
+		top: 0px;
+		left: 320px;
+		width: 320px;
+		background-color: #FFF;
+		border-radius: 0px 10px 10px 0px;
+		border-left: 1px dotted $light-text;
+		behavior: url('PIE/PIE.htc');
+		h1 {
+			border-radius: 0px 10px 0px 0px;
+			behavior: url('PIE/PIE.htc');
+			border-left: 1px dotted $light-text;
+			margin-left: -1px;
+		}
+	}
+	
+	img.cb-gal {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+#right-col {
+	width: 320px;
+	margin-left: 20px;
+	display: inline;
+	behavior: url('PIE/PIE.htc');
+	.basic {
+		width: 300px;
+		background-color: #FFF;
+		border-radius: $radius;
+		float: right;
+		margin: 20px 0 20px 10px;
+		line-height: 1.5;
+		padding-bottom: 5px;
+		behavior: url('PIE/PIE.htc');
+	}
+	h1 {
+		height: 15px;
+		padding: 20px 15px;
+		border-bottom: 1px dotted $light-text;
+		font-weight: bold;
+	}
+	
+	#follow {
+		#follow-links {
+			margin: 10px;
+		}
+		a {
+			margin-left: 10px;
+			font-size: 12px;
+			padding: 2px 5px 5px 25px;
+			height: 25px;
+		}
+		#facebook {
+			height: 22px;
+			width: 22px;
+			background: url('sprite.png') -508px -67px;
+		}
+		#twitter {
+			height: 22px;
+			width: 22px;
+			background: url('sprite.png') -508px -91px;
+		}
+		#google {
+			height: 22px;
+			width: 22px;
+			background: url('sprite.png') -508px -116px;
+		}
+	}
+	
+	#random {
+		li {
+			padding: 5px 10px;
+		}
+		a {
+			background: url('sprite.png') -432px 0px no-repeat;
+			width: 20px;
+			height: 18px;
+			padding-left: 20px;
+		}
+	}
+	
+	#find-us {
+		address {
+			padding: 10px 15px;
+			font-style: normal;
+		}
+		h2 {
+			font-weight: bold;
+			margin: 0px;
+		}
+	}
+}
+
+
+/* Footer Styling */
+footer, .footer {
+  font-size: 10px;
+  background-color: $dark-background;
+  color: $dark-text;
+	display: block;
+	clear: both;
+	margin: 0px;
+}
+.footer {
+	width: 960px;
+	padding: 30px;
+	font-size: 12px;
+	margin: 0px auto;
+	p {
+		width: 540px;
+		display: inline;
+		float: left;
+	}
+	.bottom-nav {
+		width: 410px;
+		display: inline;
+		float: right;
+	}
+	a {
+		display: inline;
+		border-left: 1px dotted $dark-text;
+		padding: 5px 20px;
+		+a+a+a {
+			border-right: 1px dotted $dark-text;
+		}
+	}
+}
